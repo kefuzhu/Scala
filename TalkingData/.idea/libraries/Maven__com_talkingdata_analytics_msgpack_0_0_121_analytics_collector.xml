@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.talkingdata.analytics:msgpack:0.0.121.analytics-collector">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/talkingdata/analytics/msgpack/0.0.121.analytics-collector/msgpack-0.0.121.analytics-collector.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/talkingdata/analytics/msgpack/0.0.121.analytics-collector/msgpack-0.0.121.analytics-collector-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/talkingdata/analytics/msgpack/0.0.121.analytics-collector/msgpack-0.0.121.analytics-collector-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

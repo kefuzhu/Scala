@@ -1,0 +1,112 @@
+feature_filter.sh
+
+$1: master	yarn-cluster
+$2: name	feature_filter
+$3: num-executors	40	
+$4: executor-memory	8g
+$5: executor-cores	2
+$6: driver-memory	10g
+$7: outputPath_tmp	/datalab
+$8: data_6month		/datalab/Plover/TimeFeature20170201To20170725
+$9: labled_data		/datalab/gender/feature_importance/gender_tdid_label_new
+-----
+feature_update.sh
+
+$1: master	yarn-cluster
+$2: name	feature_update
+$3: num-executors	10
+$4: executory-memory	4g
+$5: executor-cores	2
+$6: outputPath_tmp	/datalab
+-----
+pkg_extract.sh
+
+$1: master      yarn-cluster
+$2: name        PkgExtract
+$3: num-executors       40
+$4: executory-memory    8g
+$5: executor-cores      2
+$6: driver-memory       10g
+$7: outputPath_tmp      /datalab
+$8: data_6month		/datalab/Plover/TimeFeature20170201To20170725
+-----
+app_extract.sh
+
+$1: master      yarn-cluster
+$2: name        AppExtract
+$3: num-executors       40
+$4: executory-memory    8g
+$5: executor-cores      2
+$6: driver-memory       10g
+$7: outputPath_tmp      /datalab
+$8: data_6month         /datalab/Plover/TimeFeature20170201To20170725
+-----
+device_extract.sh
+
+$1: master      yarn-cluster
+$2: name        DeviceExtract
+$3: num-executors       40
+$4: executory-memory    8g
+$5: executor-cores      2
+$6: driver-memory       10g
+$7: outputPath_tmp      /datalab
+$8: data_6month         /datalab/Plover/TimeFeature20170201To20170725
+-----
+extract_activities.sh
+
+$1: master	yarn-cluster
+$2: name        extract_activities
+$3: num-executors       24
+$4: executory-memory    4g
+$5: executor-cores      4
+$6: outputPath_tmp      /datalab
+$7: activity_data	/datascience/data/data-writer/ta/tdcv3/data/$s/*/*
+-----
+activity_extract.sh
+
+$1: master      yarn-cluster
+$2: name        ActivityMerge
+$3: num-executors       100
+$4: executory-memory    4g
+$5: executor-cores      1
+$6: driver-memory       3g
+$7: outputPath_tmp      /datalab
+-----
+train_prepare.sh
+
+$1: master      yarn-cluster
+$2: name        TrainSet
+$3: num-executors       30
+$4: executory-memory    4g
+$5: executor-cores      2
+$6: driver-memory       10g
+$7: outputPath_tmp      /datalab
+-----
+train.sh
+
+$1: master      yarn-cluster
+$2: name        Train
+$3: num-executors       50
+$4: executory-memory    8g
+$5: executor-cores      2
+$6: outputPath_tmp      /datalab
+-----
+prediction.sh
+
+$1: master      yarn-cluster
+$2: name        prediction
+$3: num-executors       30
+$4: executory-memory    12g
+$5: executor-cores      2
+$6: driver-memory       8g
+$7: outputPath_tmp      /datalab
+$8: outputPath_final	/gender_classification-2.0
+-----
+union.sh
+
+$1: master      yarn-cluster
+$2: name        result_union
+$3: num-executors       40
+$4: executory-memory    8g
+$5: executor-cores      2
+$6: outputPath_final      /gender_classification-2.0
